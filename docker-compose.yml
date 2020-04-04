@@ -1,0 +1,8 @@
+cypress:
+  # image: cypress/base:10
+  build: .
+  container_name: cypress
+  command: npx cypress run
+  volumes:
+    - ./cypress:/app/cypress
+    - ./cypress.json:/app/cypress.json
