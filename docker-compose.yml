@@ -1,8 +1,7 @@
 cypress:
-  # image: cypress/base:10
-  build: .
+  image: cypress/included:4.3.0
   container_name: cypress
-  command: npx cypress run
   volumes:
-    - ./cypress:/app/cypress
-    - ./cypress.json:/app/cypress.json
+    - ./cypress:/cypress
+    - ./cypress.json:/cypress.json
+    - ./cypress.env.json:/cypress.env.json
